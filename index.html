@@ -10,70 +10,82 @@
         <link rel="stylesheet" href="./css/style.css" />
     </head>
     <body class="page">
-        <header>
-            <nav>
-                <!--Шапка-->
+   
+     <header class="page-header">
+         <div class="conteiner">
+            <div class="container-flex">
+                <nav class="site-nav">
+                    <!--Шапка-->
                 <a href="/" class="logo"> 
                     <span class="logo-web">Web</span><span class="logo-studios">Studios</span>
                 </a>       
-                <ul class="site-nav list">
-                    <li><a href="./index.html" class="link current">Студия</a></li>
-                    <li><a href="./portfolio.html" class="link">Портфолио</a></li>
-                    <li><a href="" class="link">Контакты</a></li>
+                    <ul class="site-nav list">
+                        <li class="item"><a href="./index.html" class="link current">Студия</a></li>
+                        <li class="item"><a href="./portfolio.html" class="link">Портфолио</a></li>
+                        <li class="item"><a href="" class="link">Контакты</a></li>
+                    </ul>
+                </nav>
+            <!-- Контакты-->
+                <ul class="contact-nav list">
+                    <li class="item"><a href="mailto:info@example.com" class="contact-nav">info@example.com</a></li>
+                    <li class="item"><a href="tel:+380991111111" class="contact-nav">+38 099 111 11 11</a></li>
                 </ul>
-            </nav>
-        <!-- Контакты-->
-            <ul class="contact-nav list">
-                <li><a href="mailto:info@example.com" class="contact-nav">info@example.com</a></li>
-                <li><a href="tel:+380991111111" class="contact-nav">+38 099 111 11 11</a></li>
-            </ul>
+            </div>
+         </div>
         </header>
-        <main>
+     <main>
             <!--Банер-->
             <div class="banner">
+                <div class="conteiner">
                 <h1>Эффективные решения для вашего бизнеса</h1>
-                <a href="" class="button-primacy">Заказать услугу</a>
+                    <a href="" class="button-primacy">Заказать услугу</a>
+                </div>
             </div>
             <!--Блоки информации-->
             <section class="section">
+              <!-- <div class="cotainer"> -->
+                  <div class="conteiner">
                 <ul class="feature-list list">
-                    <li>
+                    <li class="item">
                         <h3 class="title">Внимание к деталям</h3>
                         <p class="section-title">Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
                     </li>
-                    <li>
+                    <li class="item">
                         <h3 class="title">Пунктуальность</h3>
                         <p class="section-title">Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
                     </li>
-                    <li>
+                    <li class="item">
                         <h3 class="title">Планирование</h3>
                         <p class="section-title">Равным образом консультация с широким активом в значительной степени обуславливает.</p>
                     </li>
-                    <li>
+                    <li class="item">
                         <h3 class="title">Современные технологии</h3>
                         <p class="section-title">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
                     </li>
                 </ul>
+            </div>
+              <!-- </div> -->
             </section>
             <!--Вид деятельности-->
-            <section class="section">
-                <h2 class="section-profession">Чем мы занимаемся</h2>
-                <ul class="list">
-                    <li>
+            <section class="section gallery">
+                <div class="conteiner">
+                <h2 class="section-profession gallery">Чем мы занимаемся</h2>
+                <ul class="list conteiner-section">
+                    <li class="item">
                         <img src="./img/box/box_1.jpg"
                          alt="box 1" 
                          width="370" 
                          height="294" 
                         />
                         </li>
-                    <li>
+                    <li class="item">
                         <img src="./img/box/box_2.jpg"
                          alt="box 2"
                          width="370" 
                          height="294" 
                           />
                         </li>
-                    <li>
+                    <li class="item">
                         <img src="./img/box/box_3.jpg" 
                         alt="box 3"
                          width="370" 
@@ -81,11 +93,13 @@
                           />
                         </li>
                 </ul>
+            </div>
             </section>
-            <section class="section">
-                <h2 class="section-profession">Наша команда</h2>
-                <ul class="list">
-                    <li>
+            <section class="section-profession">
+                <div class="conteiner">
+                <h2 class="header-profession">Наша команда</h2>
+                <ul class="list conteiner-profession">
+                    <li class="item">
                         <img src="./img/people/img_1.jpg" 
                         alt="Игорь Демьяненко"
                         Width="270"
@@ -94,7 +108,7 @@
                         <h4 class="section-header">Игорь Демьяненко</h4>
                         <p class="profession-title">Product Designer</p>
                     </li>
-                    <li>
+                    <li class="item">
                         <img src="./img/people/img_2.jpg" 
                         alt="Ольга Репина"
                         Width="270"
@@ -103,7 +117,7 @@
                         <h4 class="section-header">Ольга Репина</h4>
                         <p class="profession-title">Frontend Developer</p>
                     </li>
-                    <li>
+                    <li class="item">
                         <img src="./img/people/img_3.jpg" 
                         alt="Николай Тарасов"
                         Width="270"
@@ -112,7 +126,7 @@
                         <h4 class="section-header">Николай Тарасов</h4>
                         <p class="profession-title">Marketing</p>
                     </li>
-                    <li>
+                    <li class="item">
                         <img src="./img/people/img_4.jpg" 
                         alt="Михаил Ермаков" 
                         Width="270"
@@ -122,17 +136,20 @@
                         <p class="profession-title">UI Designer</p>
                     </li>
                 </ul>
+            </div>
             </section>
         </main>
         <footer class="footer">
+            <div class="conteiner">
             <a href="/" class="logo"> 
                 <span class="logo-web">Web</span><span class="logo-studios">Studios</span>
             </a>
-            <ul class="list">
-                <li><address class="aside">г. Киев, пр-т Леси Украинки, 26</address></li>
+            <ul class="list list-footer">
                 <li><a href="mailto:info@example.com" class="footer-elements">info@example.com</a></li>
+                <li><address class="aside">г. Киев, пр-т Леси Украинки, 26</address></li>
                 <li><a href="tel:+380991111111" class="footer-elements">+38 099 111 11 11</a></li>
             </ul>
+        </div>
         </footer>
     </body>
   
