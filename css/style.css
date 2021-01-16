@@ -14,6 +14,7 @@
 .page{
     /* background: #E5E5E5; */
     /* color: #757575; */
+    position: relative;
     font-family: Roboto, sans-serif;
     letter-spacing: 0.03em;
   
@@ -235,30 +236,40 @@ display: block;
     top:0;
     left: 0;
     width: 100%;
-    height: 1024px;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
-   
+    z-index: 1;
+    /* right: 0;
+    bottom: 0; */
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1)
+    
 }
 .backdrop.is-hidden{
 opacity: 0;
 pointer-events: none;
 }
+.backdrop.is-hidden .modal{
+    transform: translate(-50%, -50%) scale(1);
+}
+
 .modal{
     position: absolute;
    top: 50%;
    left: 50%;
-   transform: translate(-50%,-50%);
+   
+   transform: translate(-50%, -50%) scale(1);
+   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-
-    min-width: 528px;
-    min-height: 581px;  
-  padding: 15px;
-    background: #FFFFFF;
+    width: 530px;
+    height: 580px;  
+   
+     background: #FFFFFF;
      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
      border-radius: 4px;
 }
-.close{
-    position: fixed;
+.modal .close{
+    position: absolute;
     top:8px;
     right: 8px;
     width: 30px;
@@ -266,11 +277,14 @@ pointer-events: none;
    
      background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    fill: rgba(0,0,0,1);
     box-sizing: border-box;
     border-radius: 50%;
+    cursor: pointer;
  
 }
 .icon-close{
+    position: absolute;
     top:10px;
     right: 9px;
     color: #000000;
@@ -368,7 +382,7 @@ color: #FFFFFF;
     margin-top: 0;
 }
 .social-icons{
-    padding: 16px 32px 30px 32px;    
+    padding: 0px 32px 30px 32px;    
 }
 
 .profession-icons{
@@ -417,17 +431,17 @@ color: #FFFFFF;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(129, 179, 221, 0.9);
+    background-color: rgba(33, 150, 243, 0.9);
     transform: translateY(100%);
+    
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
-}.item:focus .overlay-portfolio,
-.item:hover .overlay-portfolio{
+}.item .item-a:focus .overlay-portfolio,
+ .item .item-a:hover .overlay-portfolio
+{
     transform: translateY(0)  
 }
 .overlay-text{
-    
-
     display: block;
     justify-content: center;
     align-items: center;
