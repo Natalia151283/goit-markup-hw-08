@@ -219,6 +219,7 @@ display: block;
     color :#FFFFFF;
     background-color: #2196F3; 
     font-family: inherit;
+    font-weight: bold;
     font-size: 16px;
     line-height: 1.875;
     text-decoration: none;
@@ -283,12 +284,6 @@ pointer-events: none;
     cursor: pointer;
  
 }
-.icon-close{
-    position: absolute;
-    top:10px;
-    right: 9px;
-    color: #000000;
-}
 
    
 
@@ -304,6 +299,9 @@ pointer-events: none;
 
 .conteiner-section .item{
     position: relative;
+    display: block;
+    max-width: 100%;
+    height: auto;
    
 }
 .title-gallery{
@@ -316,7 +314,8 @@ pointer-events: none;
     margin: 0;
     background-color: rgba(47, 48, 58, 0.8);
     font-size: 14px;
-line-height: 16px;
+    font-weight: bold;
+line-height: 1.142;
 text-align: center;
 letter-spacing: 0.03em;
 text-transform: uppercase;
@@ -331,10 +330,10 @@ color: #FFFFFF;
 
 .section-gallery,
 .section-profession {
- background-color: #F5F4FA;
- ;
-    padding-bottom: 94px;
+  padding-bottom: 94px;
 }
+.section-profession {
+    background-color: #F5F4FA;}
 
 .header-profession{
     margin-top: 0px;
@@ -358,6 +357,7 @@ color: #FFFFFF;
     background: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+    margin-bottom: -3px;
 }
 
 .conteiner-profession .item:not(:last-child){
