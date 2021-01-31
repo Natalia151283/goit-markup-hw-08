@@ -1,0 +1,58 @@
+  .section-gallery{
+ padding-bottom: 94px;
+     .header-profession{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        margin-top: 0px;
+        color: $title-text-color;
+        font-size: 36px;
+        line-height: 1.16;
+        text-align: center;
+    
+    }
+    }
+      .conteiner-section{
+       display: flex; 
+       justify-content: space-between;
+       padding-left: 0;
+       padding-right: 0;
+       margin-top: 50;
+       margin-right: 0;
+       margin-left: 0;
+       .item{
+        position: relative;
+        display: block;
+        max-width: 100%;
+        height: auto;  
+    }
+     &.item:not(:last-child){
+      margin-right: 30px; 
+    }
+    }
+    
+   
+    .title-gallery{
+        contain: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding-top: 27px;
+        padding-bottom: 27px;
+        margin: 0;
+        background-color: rgba(47, 48, 58, 0.8);
+        font-size: 14px;
+        font-weight: bold;
+    line-height: 1.142;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    transform: translateY(-6%);
+    
+    color: $background-color;
+    }
+    
+   
+    
+    
