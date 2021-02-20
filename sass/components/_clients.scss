@@ -1,65 +1,131 @@
-   .clients-section{
-        padding-bottom: 94px;
-        padding-top: 94px;
-    }
-    .conteiner-clients{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .client-post{
-        margin: 0;
-        font-weight: bold;
-        font-size: 36px;
-        line-height: 42px;
-        text-align: center;
-        letter-spacing: 0.03em;
-    
-        color: $title-text-color;
-    } 
-    }
-  
+   .clients-section {
+       padding-bottom: 60px;
+       padding-top   : 60px;
 
-    .clients{
+       @media screen and (min-width:1200px) {
+           padding-bottom: 94px;
+           padding-top   : 94px;
+       }
+   }
 
-       margin-top: 50px;
-         .clients-list{
-        display: flex;
-        justify-content: space-between;
-       
-    }
-    }
- 
-  .icon-client > .svg-icon{
-        display: block;
-    }
-    
-   
-    .clients-icon{
-     &:not(:last-child){
-        margin-right: 30px;
-    }
-       .icon-client {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 170px;
-        height: 90px;
-        border: 1px solid #AFB1B8;
-        box-sizing: border-box;
-        border-radius: 4px;
-        fill: rgba(175, 177, 184, 1);
-        
-        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-     .icon-client:hover,
-     .icon-client:focus{
-        fill: rgba(33,150,243,1);
-        border: 1px solid rgba(33,150,243,1);  
-    }
-    }
-    
-    
-    
-    
-    
+   .conteiner-clients {
+       display        : flex;
+       align-items    : center;
+       justify-content: center;
+
+       .client-post {
+           margin        : 0;
+           font-weight   : bold;
+           font-size     : 36px;
+           line-height   : 42px;
+           text-align    : center;
+           letter-spacing: 0.03em;
+
+           color: $title-text-color;
+       }
+   }
+
+
+   .clients {
+       @media screen and (min-width:1200px) {
+           margin-top: 20px;
+       }
+
+       .clients-list {
+           justify-content: space-between;
+       }
+
+       @media screen and (max-width:767px) {
+           .clients-list {
+               display        : flex;
+               flex-wrap      : wrap;
+               width          : 100%;
+               justify-content: center;
+
+           }
+       }
+
+       @media screen and (min-width:768px) {
+           .clients-list {
+               display        : flex;
+               flex-wrap      : wrap;
+               width          : 100%;
+               justify-content: space-between;
+
+           }
+       }
+
+       @media screen and (min-width:1200px) {
+           .clients-list {
+               display        : flex;
+               justify-content: space-between;
+           }
+       }
+
+       @media screen and (min-width:480px) {
+           .clients-icon:nth-child(2n) {
+
+               margin-left: 30px;
+           }
+       }
+
+       @media screen and (min-width:768px) {
+           .clients-icon:nth-child(2n) {
+               margin-left: 0;
+
+           }
+       }
+
+   }
+
+
+
+
+
+   .icon-client>.svg-icon {
+       display: block;
+   }
+
+   .clients-icon {
+       width     : 210px;
+       margin-top: 30px;
+
+       @media screen and (min-width:768px) {
+
+           width: 226px;
+       }
+
+       @media screen and (min-width:1200px) {
+
+           width: 170px;
+       }
+   }
+
+
+
+
+
+   .icon-client {
+
+       display              : flex;
+       align-items          : center;
+       justify-content      : center;
+       //    width          : 210px;
+       height               : 90px;
+       border               : 1px solid #AFB1B8;
+       box-sizing           : border-box;
+       border-radius        : 4px;
+       fill                 : rgba(175, 177, 184, 1);
+
+       transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+           border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+
+   }
+
+   .icon-client:hover,
+   .icon-client:focus {
+       fill  : rgba(33, 150, 243, 1);
+       border: 1px solid rgba(33, 150, 243, 1);
+   }

@@ -1,20 +1,43 @@
- .page{
-        position: relative;
-        font-family: $main-font-family;
-        letter-spacing: 0.03em;
-    }
-     h1,h2,h3,h4{
-        font-family: Roboto;
-    }
-     .list{
-        list-style: none;
-        margin: 0px;
-        padding: 0px;
-    }
-     .conteiner{
-        width: 1200px;
-        margin: 0px auto;
-        padding-left: 15px;
-        padding-right: 15px;
-       
-    }
+ .page {
+     position      : relative;
+     font-family   : $main-font-family;
+     letter-spacing: 0.03em;
+ }
+
+ h1,
+ h2,
+ h3,
+ h4 {
+     font-family: Roboto;
+ }
+
+ .list {
+     list-style: none;
+     margin    : 0px;
+     padding   : 0px;
+ }
+
+
+
+ .conteiner {
+
+     box-sizing: content-box;
+     margin    : 0 auto;
+
+     padding: 0 15px;
+
+
+     @media screen and (min-width: 480px) {
+         width: 450px;
+     }
+
+     @media screen and (min-width: 768px) {
+         width: 738px;
+
+     }
+
+     @media screen and (min-width: 1200px) {
+         width: 1170px;
+     }
+
+ }

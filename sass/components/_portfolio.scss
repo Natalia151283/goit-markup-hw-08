@@ -1,93 +1,129 @@
-    .portfolio-img{
+    .portfolio-img {
         position: relative;
         overflow: hidden;
     }
-    .overlay-portfolio{
-        position: absolute;
-        top:0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+
+    .portfolio-img img {
+        top                : 0;
+        left               : 0;
+        width              : 100%;
+        height             : auto;
+        background-position: center;
+        background-size    : cover;
+    }
+
+    .portfolio-img .overlay-portfolio {
+        position        : absolute;
+        top             : 0;
+        left            : 0;
+        width           : 100%;
+        height          : 100%;
         background-color: rgba(33, 150, 243, 0.9);
-        transform: translateY(100%);
-        
+        transform       : translateY(100%);
+
         transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-     .overlay-text{
-        display: block;
-        justify-content: center;
-        align-items: center;
-    
-        padding: 63px 24px;
-        margin: 0;
-        text-align: center;
-        font-style: normal;
-        font-weight: normal;
-         font-size: 18px;
-        line-height: 28px;
-    
-        letter-spacing: 0.03em;
-        color: rgba(255,255,255,1) ;}   
+
+        @media screen and (min-width:1200px) {
+            position: absolute;
+            top     : 0;
+            left    : 0;
+            width   : 100%;
+            height  : 100%;
+        }
+
+        .overlay-text {
+            display           : flex;
+            height            : 100%;
+            justify-content   : center;
+            align-items       : center;
+            padding           : 10px 24px;
+            // margin-top     : 2px;
+            margin            : 0;
+            text-align        : left;
+            font-size         : 18px;
+            line-height       : 1.5555;
+            letter-spacing    : 0.03em;
+            color             : rgba(255, 255, 255, 1);
+
+            @media screen and (min-width:1200px) {
+                display        : block;
+                justify-content: center;
+                align-items    : center;
+                padding        : 63px 24px;
+                margin         : 0;
+            }
+        }
     }
-    .item .item-a:focus .overlay-portfolio,
-     .item .item-a:hover .overlay-portfolio
-    {
-        transform: translateY(0)  
-    }
-    
-    .portfolio-list{
-        padding-top: 50px;
+
+    .portfolio-list {
+        padding-top   : 50px;
         padding-bottom: 85px;
-        padding-left: 0;
-      .portfolio{
-        text-decoration: none; 
-        display: flex;
-        flex-wrap: wrap;
-         margin-top: 0px;
-        margin-bottom: -30px;
-        margin-right: -15px;
-        margin-left: -15px;}   
+        padding-left  : 0;
     }
-   
-    
-   
-    .item-a{
-       
-        display: block;
-         
-         background: $background-color;
-         box-sizing: border-box;  
-         margin-right: 14px;
-         margin-left: 14px;
-         margin-bottom: 30px;
-         border: 1px solid rgba(238,238,238,1);
-         text-decoration: none;
-    &:hover,
-    &:focus{
-         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    /*RRM*/
+    .portfolio {
+        text-decoration: none;
+        display        : flex;
+        flex-wrap      : wrap;
+
+        @media screen and (min-width:768px) {
+            margin-top   : 0px;
+            margin-bottom: -30px;
+            margin-right : -15px;
+            margin-left  : -15px;
+        }
+
+        .item {
+            background     : $background-color;
+            box-sizing     : border-box;
+            margin-left    : 15px;
+            margin-right   : 15px;
+            margin-bottom  : 30px;
+            border         : 1px solid #eee;
+            cursor         : pointer;
+            text-decoration: none;
+
+            &:focus,
+            &:hover {
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+                .overlay-portfolio {
+                    transform: translateY(0);
+                }
+            }
+
+            @media screen and (min-width:768px) {
+                width: calc(50% - 30px);
+            }
+
+            @media screen and (min-width:1200px) {
+                width: calc(33.333333% - 30px);
+            }
+        }
     }
+
+    .desk {
+        padding: 21px 24px 20px 24px;
+
+        &__portfolio-header {
+            color         : $title-text-color;
+            font-family   : Roboto;
+            font-style    : normal;
+            font-weight   : bold;
+            font-size     : 18px;
+            line-height   : 2;
+            letter-spacing: 0.06em;
+            margin        : 0px;
+        }
+
+        &__portfolio-title {
+            color      : var(--primary-text-color);
+            font-size  : 16px;
+            line-height: 1.875;
+            color      : #757575;
+
+            margin-top   : 3px;
+            margin-bottom: 0;
+        }
     }
- 
-    .desk{
-       
-        padding: 21px 24px 20px 24px;  
-          &__portfolio-header{
-        color: $title-text-color;
-         font-family: Roboto;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 18px;
-        line-height:2; 
-       letter-spacing: 0.06em;
-        margin: 0px; 
-    } 
-        &__portfolio-title{
-        color: var( --primary-text-color);
-        font-size: 16px;
-        line-height: 1.875;
-        color:  #757575;
-;
-        margin-top: 3px;
-        margin-bottom: 0;}
-    }
-  
-    
